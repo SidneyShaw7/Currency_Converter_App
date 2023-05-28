@@ -1,0 +1,13 @@
+.section-center {
+    text-align: center;
+    align-items: center;
+}
+
+.main-info-converter-container {
+    display: flex;
+    /* align-items: center; */
+}
+
+.main-conversion-block {
+    display: inline-flex;
+}
