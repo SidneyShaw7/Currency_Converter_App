@@ -1,6 +1,7 @@
 .section-center {
     text-align: center;
     align-items: center;
+    display: inline-flex;
 }
 
 .main-info-converter-container {
@@ -9,5 +10,13 @@
 }
 
 .main-conversion-block {
+    display: inline-flex;
+}
+
+.info-graph-container {
+    display: flex;
+}
+
+.info-graph-block {
     display: inline-flex;
 }
