@@ -1,20 +1,22 @@
-.section-center {
+/* .section-center {
     text-align: center;
     align-items: center;
     display: flex;
     justify-content: center;
-}
-
-/* .main-info-converter-container {
-    display: flex;
-    align-items: center;
-    text-align: center;
 } */
+
+.main-info-converter-container {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    /* flex-wrap: wrap; */
+}
 
 .main-conversion-block {
     display: inline-flex;
     align-items: center;
-    /* justify-content: center; */
+    justify-content: center;
 }
 
 /* .info-graph-container {
@@ -71,3 +73,17 @@ input {
     align-items: center;
     display: flex;
 }
+
+.down-side-block-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.date-picker-wrapper {
+    text-align: center;
+}
+
+/* .info-graph-container {
+    margin: 10px;
+} */
