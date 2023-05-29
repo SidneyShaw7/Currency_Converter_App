@@ -1,22 +1,73 @@
 .section-center {
     text-align: center;
     align-items: center;
-    display: inline-flex;
+    display: flex;
+    justify-content: center;
 }
 
-.main-info-converter-container {
+/* .main-info-converter-container {
     display: flex;
-    /* align-items: center; */
-}
+    align-items: center;
+    text-align: center;
+} */
 
 .main-conversion-block {
     display: inline-flex;
+    align-items: center;
+    /* justify-content: center; */
 }
 
-.info-graph-container {
+/* .info-graph-container {
     display: flex;
 }
 
 .info-graph-block {
     display: inline-flex;
+} */
+
+.left-side-form-control-name {
+    display: inline-flex;
+}
+
+.right-side-form-control-name {
+    display: inline-flex;
+}
+
+.input-block {
+    border: 1px solid;
+    padding: 10px;
+    margin: 7px;
+    border-radius: 5px;
+}
+
+/* .left-side-form-control-name {
+    
+}
+
+.right-side-form-control-name {
+    
+} */
+
+.left-side-form-control-value {
+    text-align: left;
+}
+
+.right-side-form-control-value {
+    text-align: left;
+}
+
+input {
+    width: 200px;
+    height: 35px;
+    font-size: 25px;
+}
+
+.left-side-btn-container {
+    align-items: center;
+    display: flex;
+}
+
+.right-side-btn-container {
+    align-items: center;
+    display: flex;
 }
