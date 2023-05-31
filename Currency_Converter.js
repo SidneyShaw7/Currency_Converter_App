@@ -14,28 +14,30 @@ const rightDownInput = document.querySelector('.right-down-input');
 
 //      rest
 const formControl = document.querySelector('.form-control');
-
 const apiKey = 'clX3L1WRYiLmRCB5fFNRxqoEuAQKzuCESy3id5D0';
 // *****       EVENT LISTENERS      *****
 
-document.addEventListener('DOMContentLoaded', getDate());
+document.addEventListener('DOMContentLoaded', makeReq);
 
 
 
 // *****        FUNCTIONS       *****
 
-// async function makeReq() {
-//     const currentDate = new Date().toJSON();
-//     const getLatest = new URL(`https://api.freecurrencyapi.com/v1/latest?apikey=${apiKey}`);
-//     const getHistorical = new URL(`https://api.freecurrencyapi.com/v1/historical?apikey=${apiKey}&date_from=2021-12-29&date_to=2023-05-29`);
-//     const responseLatest = await fetch(getLatest);
-//     const responseHistorical = await fetch(getHistorical);
-//     const latestData = await responseLatest.json();
-//     const historicalData = await responseHistorical.json();
-//     console.log(latestData);
-//     console.log(historicalData);
-//     console.log(currentDate);
-// }
+
+
+async function makeReq() {
+    const currentDate = date();
+    const newPriorDate = priorDate();
+    // const getLatest = new URL(`https://api.freecurrencyapi.com/v1/latest?apikey=${apiKey}`);
+    const getHistorical = new URL(`https://api.freecurrencyapi.com/v1/historical?apikey=${apiKey}&date_from=${newPriorDate}&date_to=${currentDate}`);
+    // const responseLatest = await fetch(getLatest);
+    const responseHistorical = await fetch(getHistorical);
+    // const latestData = await responseLatest.json();
+    const historicalData = await responseHistorical.json();
+    // console.log(latestData);
+    console.log(historicalData);
+    // console.log(currentDate);
+}
 
 async function getCurrencyExchange() {
     const holdingCurrency = leftUpInput.value;
@@ -44,7 +46,29 @@ async function getCurrencyExchange() {
     const wantedValue = rightDownInput.value;
 }
 
-function getDate() {
-    const currentDate = new Date().toLocaleDateString();
-    console.log(currentDate);
+
+// getting corrected dates 
+function date() {
+    const date = new Date().toLocaleDateString();
+    return swapElements(date, 1, 2);
 }
+
+function priorDate() {
+    const priorMonths = 3;
+    const currentDate = new Date();
+    const currentMonth = currentDate.getMonth();
+    currentDate.setMonth(currentMonth - priorMonths);
+    const newCurrentDate = currentDate.toLocaleDateString();
+    return swapElements(newCurrentDate, 1, 2);
+}
+
+function swapElements(date, index1, index2) {
+    var splitDate = date.split('/').reverse();
+    let temp = splitDate[index1];
+    splitDate[index1] = splitDate[index2];
+    splitDate[index2] = temp;
+    const currentDate = splitDate.join('-');
+    return currentDate;
+};
+
+
