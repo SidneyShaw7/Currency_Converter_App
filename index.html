@@ -8,6 +8,7 @@
     <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-base.min.js"></script>
     <!-- styles -->
     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
@@ -15,65 +16,101 @@
     <section class="section-center">
         <div class="main-info-converter-container">
             <form action="" class="form-control">
-            <div class="main-conversion-block">
-                <div class="sub-main-conversion-block">
-                    <div class="left-side-converion-block">
-                        <div class="left-side-form-control-name input-block">
-                            <input type="text" name="" id="" class="left-up-input">
-                            <div class="left-side-btn-container">
-                                <button type="button" title="clear" class="left-side-clear-btn">x</button>
-                                <button type="button" title="extend" class="left-side-extend-btn">v</button>
+                <div class="main-conversion-block">
+                    <div class="sub-main-conversion-block">
+                        <div class="left-side-converion-block">
+                            <div class="left-side-form-control-name input-block select-menu">
+                                <input type="text" name="" id="" class="left-up-input input">
+                                <div class="left-side-btn-container">
+                                    <button type="button" title="clear" class="left-side-clear-btn">x</button>
+                                    <button type="button" title="extend" class="left-side-extend-btn">v</button>
+                                </div>
+                                <ul class="options">
+                                    <li>EUR Euro</li>
+                                    <li> USD US Dollar</li>
+                                    <li> JPY Japanese Yen</li>
+                                    <li> BGN Bulgarian Lev</li>
+                                    <li> CZK Czech Republic Koruna</li>
+                                    <li> DKK Danish Krone</li>
+                                    <li> GBP British Pound Sterling</li>
+                                    <li> HUF Hungarian Forint</li>
+                                    <li> PLN Polish Zloty</li>
+                                    <li> RON Romanian Leu</li>
+                                    <li> SEK Swedish Krona</li>
+                                    <li> CHF Swiss Franc</li>
+                                    <li> ISK Icelandic Króna</li>
+                                    <li> NOK Norwegian Krone</li>
+                                    <li> HRK Croatian Kuna</li>
+                                    <li> RUB Russian Ruble</li>
+                                    <li> TRY Turkish Lira</li>
+                                    <li> AUD Australian Dollar</li>
+                                    <li> BRL Brazilian Real</li>
+                                    <li> CAD Canadian Dollar</li>
+                                    <li> CNY Chinese Yuan</li>
+                                    <li> HKD Hong Kong Dollar</li>
+                                    <li> IDR Indonesian Rupiah</li>
+                                    <li> ILS Israeli New Sheqel</li>
+                                    <li> INR Indian Rupee</li>
+                                    <li> KRW South Korean Won</li>
+                                    <li> MXN Mexican Peso</li>
+                                    <li> MYR Malaysian Ringgit</li>
+                                    <li> NZD New Zealand Dollar</li>
+                                    <li> PHP Philippine Peso</li>
+                                    <li> SGD Singapore Dollar</li>
+                                    <li> THB Thai Baht</li>
+                                    <li> ZAR South African Rand</li>
+                                </ul>
+                            </div>
+                            <div class="left-side-form-control-value input-block">
+                                <input type="text" class="left-down-input input">
                             </div>
                         </div>
-                        <div class="left-side-form-control-value input-block">
-                            <input type="text" class="left-down-input">
+                        <div class="center-btn-container">
+                            <button type="button" title="swap" class="center-swipe-btn"><img src="exchange_icon_94.png"
+                                    alt="" srcset="" id="exchange-icon_94"></button>
                         </div>
-                    </div>
-                    <div class="center-btn-container">
-                        <button type="button" title="swap" class="center-swipe-btn"><img src="exchange_icon_94.png" alt="" srcset="" id="exchange-icon_94"></button>
-                    </div>
-                    <div class="right-side-conversion-block">
-                        <div class="right-side-form-control-name input-block">
-                            <input type="text" class="right-up-input">
-                            <div class="right-side-btn-container">
-                                <button type="button" title="clear" class="right-side-clear-btn">x</button>
-                                <button type="button" title="extend" class="right-side-extend-btn">v</button>
+                        <div class="right-side-conversion-block">
+                            <div class="right-side-form-control-name input-block">
+                                <input type="text" class="right-up-input input">
+                                <div class="right-side-btn-container">
+                                    <button type="button" title="clear" class="right-side-clear-btn">x</button>
+                                    <button type="button" title="extend" class="right-side-extend-btn">v</button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="right-side-form-control-value input-block">
-                            <input type="text" class="right-down-input">
-                        </div>
-                    </div>
-                </div>
-                <div class="down-side-block-container">
-                    <div class="date-picker-wrapper">
-                        <div class="date-picker-input">
-                        <label for="date-input">Date</label>  
-                        <input type="date" name="" id="date-input"> 
-                        </div>
-                    </div>
-                    <div class="rate-picker-wrapper">
-                        <label for="rate-input">Preview interbank rate</label>
-                        <div class="rate-picker-input">
-                            <input type="" name="" id="rate-input">
-                            <div class="rate-extend-btn-container">
-                                <button type="button" title="extend" class="rate-extend-btn">v</button>
+                            <div class="right-side-form-control-value input-block">
+                                <input type="text" class="right-down-input input">
                             </div>
                         </div>
                     </div>
-                </div>
+                    <div class="down-side-block-container">
+                        <div class="date-picker-wrapper">
+                            <div class="date-picker-input">
+                                <label for="date-input">Date</label>
+                                <input type="date" name="" id="date-input">
+                            </div>
+                        </div>
+                        <div class="rate-picker-wrapper">
+                            <label for="rate-input">Preview interbank rate</label>
+                            <div class="rate-picker-input">
+                                <input type="" name="" id="rate-input">
+                                <div class="rate-extend-btn-container">
+                                    <button type="button" title="extend" class="rate-extend-btn">v</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </form>
-            </div>
-            <div class="info-graph-container">
-                <div class="info-graph-block">
-                    <div class="info-graph"></div>
-                    <div class="info-btn-container">
-                        <button type="button" title="30d">30D</button>
-                        <button type="button" title="60d">60D</button>
-                        <button type="button" title="90d">90D</button>
-                    </div>
+        </div>
+        <div class="info-graph-container">
+            <div class="info-graph-block">
+                <div class="info-graph"></div>
+                <div class="info-btn-container">
+                    <button type="button" title="30d">30D</button>
+                    <button type="button" title="60d">60D</button>
+                    <button type="button" title="90d">90D</button>
                 </div>
             </div>
+        </div>
         </div>
     </section>
     <script src="Currency_Converter.js"></script>

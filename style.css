@@ -54,7 +54,7 @@
 }
 
 .input-block {
-    padding: 10px;
+    /* padding: 10px; */
     margin: 7px;
     border-radius: 5px;
 }
@@ -181,4 +181,32 @@ input {
 #exchange-icon_94 {
    width: 30px;
 
+}
+
+.options {
+    position: absolute;
+    top: 16%;
+    width: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: grey;
+    list-style-type: none;
+    /* visibility: hidden; */
+    /* display: flex; */
+    cursor: pointer;
+    align-items: center;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.input {
+    margin: 10px;
+}
+
+.options li:hover {
+    background-color: #f2f2f2;
 }

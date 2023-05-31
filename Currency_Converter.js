@@ -15,9 +15,12 @@ const rightDownInput = document.querySelector('.right-down-input');
 //      rest
 const formControl = document.querySelector('.form-control');
 const apiKey = 'clX3L1WRYiLmRCB5fFNRxqoEuAQKzuCESy3id5D0';
+
+let latestData;
+let historicalData;
 // *****       EVENT LISTENERS      *****
 
-document.addEventListener('DOMContentLoaded', makeReq);
+// document.addEventListener('DOMContentLoaded', makeReq);
 
 
 
@@ -28,47 +31,54 @@ document.addEventListener('DOMContentLoaded', makeReq);
 async function makeReq() {
     const currentDate = date();
     const newPriorDate = priorDate();
-    // const getLatest = new URL(`https://api.freecurrencyapi.com/v1/latest?apikey=${apiKey}`);
+    const getLatest = new URL(`https://api.freecurrencyapi.com/v1/latest?apikey=${apiKey}`);
     const getHistorical = new URL(`https://api.freecurrencyapi.com/v1/historical?apikey=${apiKey}&date_from=${newPriorDate}&date_to=${currentDate}`);
-    // const responseLatest = await fetch(getLatest);
+    const responseLatest = await fetch(getLatest);
     const responseHistorical = await fetch(getHistorical);
-    // const latestData = await responseLatest.json();
-    const historicalData = await responseHistorical.json();
-    // console.log(latestData);
+    latestData = await responseLatest.json();
+    historicalData = await responseHistorical.json();
+    console.log(latestData);
     console.log(historicalData);
-    // console.log(currentDate);
+    console.log(currentDate);
 }
 
 async function getCurrencyExchange() {
-    const holdingCurrency = leftUpInput.value;
-    const wantedCurrency = rightUpInput.value;
-    const holdingValue = leftDownInput.value;
-    const wantedValue = rightDownInput.value;
+    const LUInput = leftUpInput.value;
+    const RUInput = rightUpInput.value;
+    const LDInput = leftDownInput.value;
+    const RDInput = rightDownInput.value;
+    let leftCurrency = historicalData.data.LUInput;
+    let rightCurrency = historicalData.data.RUInput; 
 }
 
 
 // getting corrected dates 
 function date() {
-    const date = new Date().toLocaleDateString();
-    return swapElements(date, 1, 2);
+    const priorDays = 1;
+    const date = new Date();
+    const currentDate = date.getDate();
+    date.setDate(currentDate - priorDays);
+    const newDate = new Date(date.toString().split('GMT')[0]+'UTC').toISOString();
+    return newDate;
 }
 
 function priorDate() {
-    const priorMonths = 3;
-    const currentDate = new Date();
-    const currentMonth = currentDate.getMonth();
-    currentDate.setMonth(currentMonth - priorMonths);
-    const newCurrentDate = currentDate.toLocaleDateString();
-    return swapElements(newCurrentDate, 1, 2);
+    const priorDays = 91;
+    const date = new Date();
+    const currentDate = date.getDate();
+    date.setDate(currentDate - priorDays);
+    const newCurrentDate = date.toISOString();
+    console.log(newCurrentDate);
+    return newCurrentDate;
 }
 
-function swapElements(date, index1, index2) {
-    var splitDate = date.split('/').reverse();
-    let temp = splitDate[index1];
-    splitDate[index1] = splitDate[index2];
-    splitDate[index2] = temp;
-    const currentDate = splitDate.join('-');
-    return currentDate;
-};
+// function swapElements(date, index1, index2) {
+//     var splitDate = date.split('/').reverse();
+//     let temp = splitDate[index1];
+//     splitDate[index1] = splitDate[index2];
+//     splitDate[index2] = temp;
+//     const currentDate = splitDate.join('-');
+//     return currentDate;
+// };
 
 
