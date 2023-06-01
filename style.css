@@ -6,35 +6,42 @@
 } */
 
 .main-info-converter-container {
+    display: flex;
     text-align: center;
     align-items: center;
-    justify-content: center;
-    display: flex;
-    /* flex-wrap: wrap; */
+    justify-content: space-evenly;
 }
 
 .main-conversion-block {
-    /* display: inline-flex; */
-    /* align-items: center; */
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     border: 1px solid black;
     height: auto;
+    width: auto;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24), 0 6px 20px 0 rgba(0, 0, 0, 0.24);
 }
+/* .main-conversion-block > * {
+    flex-shrink: 0;
+} */
+.down-side-block-container {
+    display: flex;
+    justify-content: space-between;
+}
 .sub-main-conversion-block {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     height:fit-content;
 
 }
 
-.center-btn-container {
+/* .center-btn-container {
     display: inline-flex;
     align-items: center;
-}
+} */
 
-
+/* 
 .left-side-form-control-name {
     display: inline-flex;
     border: 1px solid rgb(160, 160, 160);
@@ -51,32 +58,31 @@
 }
 .right-side-form-control-name:hover {
     border: 1px solid black;
-}
+} */
 
-.input-block {
-    /* padding: 10px; */
+/* .input-block {
     margin: 7px;
     border-radius: 5px;
-}
-
+} */
+/* 
 .left-side-converion-block {
     margin: 15px;
     margin-right: 0px;
-}
-.right-side-conversion-block {
+} */
+/* .right-side-conversion-block {
     margin: 15px;
     margin-left: 0px;
-}
-
+} */
+/* 
 .left-side-form-control-value {
     text-align: left;
     border: 1px solid rgb(160, 160, 160);
     border-radius: 5px;
-}
-.left-side-form-control-value:hover {
+} */
+/* .left-side-form-control-value:hover {
     border: 1px solid black;
-}
-
+} */
+/* 
 .right-side-form-control-value {
     text-align: left;
     border: 1px solid rgb(160, 160, 160);
@@ -84,62 +90,54 @@
 }
 .right-side-form-control-value:hover {
     border: 1px solid black;
-}
-
+} */
+/* 
 input {
     width: 200px;
     height: 35px;
     font-size: 25px;
     border: none;
-}
+} */
 
-.left-side-btn-container {
+/* .left-side-btn-container {
     align-items: center;
     display: flex;
-}
+} */
 
-.right-side-btn-container {
+/* .right-side-btn-container {
     align-items: center;
     display: flex;
-}
+} */
 
-.down-side-block-container {
+/* .down-side-block-container {
     display: flex;
     align-items: center;
     margin: 23px;
     margin-top: 0px;
     justify-content: space-between;
-    /* border: 1px solid; */
     border-radius: 5px;
-}
+} */
 
-.date-picker-wrapper {
-    /* margin: 10px; */
-    /* border: 1px solid; */
-    /* padding: 10px; */
+/* .date-picker-wrapper {
     font-size: 18px;
-}
+} */
 
-.rate-picker-wrapper {
+/* .rate-picker-wrapper {
     display: flex;
-    /* margin: 10px; */
-    /* border: 1px solid; */
-    /* padding: 10px; */
     align-items: center;
     font-size: 18px;
-}
-.rate-picker-input {
+} */
+/* .rate-picker-input {
     display: inline-flex;
     align-items: center;
     margin-left: 27px;
     border: 1px solid rgb(160, 160, 160);
     border-radius: 5px;
-    /* background: none; */
-}
-.rate-picker-input:hover {
+} */
+/* .rate-picker-input:hover {
     border: 1px solid black;
-}
-#date-input {
+} */
+/* #date-input {
     font-size: 15px;
     width: 150px;
     height: 40px;
@@ -147,37 +145,34 @@ input {
     border-radius: 5px;
     text-align: center;
     margin-left: 80px;
-}
-#date-input:hover {
+} */
+/* #date-input:hover {
     border: 1px solid black;
-}
-#rate-input {
+} */
+/* #rate-input {
     font-size: 15px;
     height: 36px;
     width: 50px;
     border: 0px;
     margin-left: 2px;
-    /* border: 1px solid rgb(160, 160, 160);
-    border-radius: 5px; */
-    /* margin-right: 27px; */
-}
+} */
 
 
-.info-graph-container {
+/* .info-graph-container {
     border: 1px solid;
     margin: 20px;
     padding: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24), 0 6px 20px 0 rgba(0, 0, 0, 0.24);
     border-radius: 10px;
-}
+} */
 
-.center-swipe-btn {
+/* .center-swipe-btn {
     font-size: 5px;
     background: none;
     border: none;
     padding: 1px;
 
-}
+} */
 #exchange-icon_94 {
    width: 30px;
 
@@ -193,7 +188,7 @@ input {
     overflow-y: auto;
     background-color: grey;
     list-style-type: none;
-    /* visibility: hidden; */
+    visibility: hidden;
     /* display: flex; */
     cursor: pointer;
     align-items: center;
@@ -203,9 +198,9 @@ li {
     margin-bottom: 10px;
 }
 
-.input {
+/* .input {
     margin: 10px;
-}
+} */
 
 .options li:hover {
     background-color: #f2f2f2;
