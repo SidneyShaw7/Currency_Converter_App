@@ -1,5 +1,7 @@
 // *****      SELECT ITEMS       *****
 //      btns
+require('dotenv').config();
+// import 'dotenv/config'
 const lsClearBtn = document.querySelector('.left-side-clear-btn');
 const rsClearBtn = document.querySelector('.right-side-clear-btn');
 const lsExtendBtn = document.querySelector('.left-side-extend-btn');
@@ -13,14 +15,17 @@ const leftDownInput = document.querySelector('.left-down-input');
 const rightDownInput = document.querySelector('.right-down-input');
 
 //      rest
-const formControl = document.querySelector('.form-control');
-const apiKey = 'clX3L1WRYiLmRCB5fFNRxqoEuAQKzuCESy3id5D0';
+
+// rest rest 
+console.log(process.env);
+const apiKey = process.env.API_KEY;
 
 let latestData;
 let historicalData;
+
 // *****       EVENT LISTENERS      *****
 
-// document.addEventListener('DOMContentLoaded', makeReq);
+document.addEventListener('DOMContentLoaded', makeReq);
 
 
 
