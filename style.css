@@ -16,9 +16,11 @@
     gap: 2em;
     margin: 20px;
 }
-.main-info-converter-container > * {
+
+.main-info-converter-container>* {
     flex: 1;
 }
+
 .main-conversion-block {
     max-width: 600px;
     display: flex;
@@ -32,14 +34,15 @@
     /* margin: 20px; */
     margin-right: 0;
 }
-.main-conversion-block > * {
+
+.main-conversion-block>* {
     flex: 1;
 }
 
 .sub-main-conversion-block {
     display: flex;
     justify-content: space-evenly;
-    height:fit-content;
+    height: fit-content;
     flex-wrap: wrap;
 }
 
@@ -48,6 +51,7 @@
         display: block;
     }
 }
+
 /* .sub-main-conversion-block > * {
     flex: 1;
 } */
@@ -60,37 +64,48 @@
 }
 
 
-.left-side-form-control-name, .right-side-form-control-name {
+.left-side-form-control-name,
+.right-side-form-control-name {
     display: flex;
     border: 1px solid rgb(160, 160, 160);
     border-radius: 5px;
-    padding: 10px;
+    /* padding: 10px; */
     justify-content: space-between;
+    position: relative;
 }
 
 .input-block {
-    margin: 7px;
+    /* margin: 7px; */
     border-radius: 5px;
 }
 
-.left-side-converion-block  {
+.input {
+    margin: 10px;
+}
+
+.left-side-converion-block {
     margin: 15px;
     flex: 1;
 }
+
 .right-side-conversion-block {
     margin: 15px;
     flex: 1;
 }
 
-.left-side-form-control-value, .right-side-form-control-value {
+.left-side-form-control-value,
+.right-side-form-control-value {
     /* text-align: left; */
     border: 1px solid rgb(160, 160, 160);
     border-radius: 5px;
-    padding: 10px;
+    /* padding: 10px; */
     display: flex;
 }
 
-.left-side-form-control-value:hover, .right-side-form-control-value:hover, .right-side-form-control-name:hover, .left-side-form-control-name:hover {
+.left-side-form-control-value:hover,
+.right-side-form-control-value:hover,
+.right-side-form-control-name:hover,
+.left-side-form-control-name:hover {
     border: 1px solid black;
 }
 
@@ -103,10 +118,11 @@
 
 input {
     /* width: 150px; */
-    height: 35px;  
+    height: 35px;
     font-size: 16px;
     border: none;
     flex: 1;
+
 }
 
 .left-side-btn-container {
@@ -129,7 +145,7 @@ input {
     flex-wrap: wrap;
 }
 
-.down-side-block-container > * {
+.down-side-block-container>* {
     flex: 1;
 }
 
@@ -140,14 +156,17 @@ input {
     align-items: center;
     justify-content: space-between;
 }
+
 .date-picker-input {
     padding-right: 16px;
 }
+
 @media (max-width: 1025px) {
     .date-picker-input {
         padding: 0;
     }
 }
+
 .rate-picker-wrapper {
     display: flex;
     align-items: center;
@@ -163,9 +182,11 @@ input {
     border: 1px solid rgb(160, 160, 160);
     border-radius: 5px;
 }
+
 .rate-picker-input:hover {
     border: 1px solid black;
 }
+
 #date-input {
     width: 150px;
     height: 40px;
@@ -173,9 +194,11 @@ input {
     border-radius: 5px;
     text-align: center;
 }
+
 #date-input:hover {
     border: 1px solid black;
 }
+
 #rate-input {
     font-size: 15px;
     height: 36px;
@@ -202,34 +225,66 @@ input {
     padding: 1px;
 
 }
-#exchange-icon_94 {
-   width: 30px;
 
+#exchange-icon_94 {
+    width: 30px;
+
+}
+
+.select-menu-wrapper {
+    display: flex;
+    position: relative;
+    margin: 7px;
+}
+
+.select-menu-wrapper>* {
+    flex: 1;
 }
 
 .options {
     position: absolute;
-    top: 16%;
-    width: auto;
-    padding-left: 40px;
-    padding-right: 40px;
-    max-height: 200px;
+    top: 60%;
+    width: 99.6%;
+    /* padding-left: 40px;
+    padding-right: 40px; */
+    max-height: 180px;
     overflow-y: auto;
-    background-color: grey;
+    background-color: white;
     list-style-type: none;
     visibility: hidden;
     /* display: flex; */
     cursor: pointer;
-    align-items: center;
+    /* align-items: center; */
+    z-index: 999;
+    padding: 0;
+    border: 0.5px solid;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
-li {
-    margin-bottom: 10px;
+@media (max-width: 1285px) {
+    .options {
+        width: 99.8%;
+    }
+}
+@media (max-width: 900px) {
+    .options {
+        width: 99.6%;
+    }
 }
 
-/* .input {
-    margin: 10px;
-} */
+.options li {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 10px;
+    /* border-radius: 5px; */
+    border-bottom: 0.5px solid;
+    /* border: 1px solid; */
+}
+.options li:last-child {
+    border: none;
+    padding-bottom: none;
+}
 
 .options li:hover {
     background-color: #f2f2f2;
