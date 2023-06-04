@@ -1,6 +1,7 @@
 // *****      SELECT ITEMS       *****
 //      btns
-require('dotenv').config();
+// require('dotenv').config();
+
 // import 'dotenv/config'
 const lsClearBtn = document.querySelector('.left-side-clear-btn');
 const rsClearBtn = document.querySelector('.right-side-clear-btn');
@@ -14,18 +15,18 @@ const rightUpInput = document.querySelector('.right-up-input');
 const leftDownInput = document.querySelector('.left-down-input');
 const rightDownInput = document.querySelector('.right-down-input');
 
-//      rest
 
-// rest rest 
-console.log(process.env);
-const apiKey = process.env.API_KEY;
+
+// rest 
+
+const apiKey = 'clX3L1WRYiLmRCB5fFNRxqoEuAQKzuCESy3id5D0';
 
 let latestData;
 let historicalData;
 
 // *****       EVENT LISTENERS      *****
 
-document.addEventListener('DOMContentLoaded', makeReq);
+// document.addEventListener('DOMContentLoaded', makeReq);
 
 
 

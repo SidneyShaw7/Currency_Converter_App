@@ -36,10 +36,6 @@
     flex: 1;
 }
 
-.down-side-block-container {
-    display: flex;
-    justify-content: space-evenly;
-}
 .sub-main-conversion-block {
     display: flex;
     justify-content: space-evenly;
@@ -47,7 +43,7 @@
     flex-wrap: wrap;
 }
 
-@media (max-width: 1230px) {
+@media (max-width: 1284px) {
     .sub-main-conversion-block {
         display: block;
     }
@@ -106,10 +102,10 @@
 
 
 input {
-    /* width: 150px;
-    height: 25px; */
-    /* font-size: 15px; */
-    /* border: none; */
+    /* width: 150px; */
+    height: 35px;  
+    font-size: 16px;
+    border: none;
     flex: 1;
 }
 
@@ -133,21 +129,37 @@ input {
     flex-wrap: wrap;
 }
 
+.down-side-block-container > * {
+    flex: 1;
+}
+
 .date-picker-wrapper {
     font-size: 18px;
     margin: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-
+.date-picker-input {
+    padding-right: 16px;
+}
+@media (max-width: 1025px) {
+    .date-picker-input {
+        padding: 0;
+    }
+}
 .rate-picker-wrapper {
     display: flex;
     align-items: center;
     font-size: 18px;
     margin: 22px;
+    justify-content: space-between;
 }
+
 .rate-picker-input {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    margin-left: 27px;
+    /* margin-left: 27px; */
     border: 1px solid rgb(160, 160, 160);
     border-radius: 5px;
 }
@@ -178,7 +190,7 @@ input {
     border: 1px solid;
     /* margin: 20px;
     margin-left: 0; */
-    padding: 20px;
+    /* padding: 20px; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24), 0 6px 20px 0 rgba(0, 0, 0, 0.24);
     border-radius: 10px;
 }
