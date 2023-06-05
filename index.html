@@ -23,10 +23,10 @@
                                 <input type="text" name="" id="" class="left-up-input input">
                                 <div class="left-side-btn-container">
                                     <button type="button" title="clear" class="left-side-clear-btn btn"><img src="x_icon.png" class="btn-img" alt=""></button>
-                                    <button type="button" title="extend" class="left-side-extend-btn btn"><img src="arrow_icon.png" class="btn-img" alt=""></button>
+                                    <button type="button" title="extend" class="left-side-extend-btn btn"><img src="arrow_icon.png" class="btn-img" id="left-extend" alt=""></button>
                                 </div>
                             </div>
-                            <ul class="options">
+                            <ul class="options opt-left">
                                 <li>EUR Euro</li>
                                 <li> USD US Dollar</li>
                                 <li> JPY Japanese Yen</li>
@@ -78,10 +78,10 @@
                                 <input type="text" class="right-up-input input">
                                 <div class="right-side-btn-container">
                                     <button type="button" title="clear" class="right-side-clear-btn btn"><img src="x_icon.png" class="btn-img" alt=""></button>
-                                    <button type="button" title="extend" class="right-side-extend-btn btn"><img src="arrow_icon.png" class="btn-img" alt=""></button>
+                                    <button type="button" title="extend" class="right-side-extend-btn btn"><img src="arrow_icon.png" class="btn-img" id="right-extend" alt=""></button>
                                 </div>
                             </div>
-                            <ul class="options">
+                            <ul class="options opt-right">
                                 <li>EUR Euro</li>
                                 <li> USD US Dollar</li>
                                 <li> JPY Japanese Yen</li>
@@ -134,11 +134,19 @@
                     <div class="rate-picker-wrapper">
                         <label for="rate-input">Preview interbank rate</label>
                         <div class="rate-picker-input">
-                            <input type="" name="" id="rate-input">
+                            <input type="text" name="" id="rate-input">
                             <div class="rate-extend-btn-container">
-                                <button type="button" title="extend" class="rate-extend-btn btn"><img src="arrow_icon.png" class="btn-img" alt=""></button>
+                                <button type="button" title="extend" class="rate-extend-btn btn"><img src="arrow_icon.png" class="btn-img" id="bottom-extend" alt=""></button>
                             </div>
                         </div>
+                        <ul class="rate-options">
+                            <li>+/- 0%</li>
+                            <li>+/- 1%</li>
+                            <li>+/- 2% (Typical ATM rate)</li>
+                            <li>+/- 3% (Typical Credit Card rate)</li>
+                            <li>+/- 4%</li>
+                            <li>+/- 5% (Typical Kiosk rate)</li>
+                        </ul>
                     </div>
                 </div>
             </div>
