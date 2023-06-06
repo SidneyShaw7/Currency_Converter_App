@@ -109,10 +109,8 @@ input:focus {
 
 .left-side-form-control-value,
 .right-side-form-control-value {
-    /* text-align: left; */
     border: 1px solid rgb(160, 160, 160);
     border-radius: 5px;
-    /* padding: 10px; */
     display: flex;
 }
 
@@ -131,12 +129,11 @@ input:focus {
 
 
 input {
-    /* width: 150px; */
     height: 35px;
     font-size: 16px;
     border: none;
     flex: 1;
-
+    width: 50px;
 }
 
 .left-side-btn-container {
@@ -151,7 +148,7 @@ input {
     margin: 2px;
 }
 
-.left-side-fc-container {
+.left-side-fc-container, .right-side-fc-container {
     display: flex;
     align-items: center;
 }
@@ -177,7 +174,6 @@ input {
 .down-side-block-container {
     display: flex;
     align-items: center;
-    /* margin: 23px; */
     margin-top: 0px;
     justify-content: space-evenly;
     border-radius: 5px;

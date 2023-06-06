@@ -32,7 +32,7 @@ let historicalData;
 let extendedList = false;
 // *****       EVENT LISTENERS      *****
 
-// document.addEventListener('DOMContentLoaded', makeReq);
+document.addEventListener('DOMContentLoaded', makeReq);
 
 lsExtendBtn.addEventListener('click', extendLList);
 rsExtendBtn.addEventListener('click', extendRList);
@@ -45,13 +45,13 @@ rateExtendBtn.addEventListener('click', extendBList)
 async function makeReq() {
     const currentDate = date();
     const newPriorDate = priorDate();
-    const getLatest = new URL(`https://api.freecurrencyapi.com/v1/latest?apikey=${apiKey}`);
+    // const getLatest = new URL(`https://api.freecurrencyapi.com/v1/latest?apikey=${apiKey}`);
     const getHistorical = new URL(`https://api.freecurrencyapi.com/v1/historical?apikey=${apiKey}&date_from=${newPriorDate}&date_to=${currentDate}`);
-    const responseLatest = await fetch(getLatest);
+    // const responseLatest = await fetch(getLatest);
     const responseHistorical = await fetch(getHistorical);
-    latestData = await responseLatest.json();
+    // latestData = await responseLatest.json();
     historicalData = await responseHistorical.json();
-    console.log(latestData);
+    // console.log(latestData);
     console.log(historicalData);
     console.log(currentDate);
 }
