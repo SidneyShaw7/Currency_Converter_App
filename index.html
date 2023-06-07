@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currency Converter App</title>
     <!-- graph -->
-    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-base.min.js"></script>
+    <!-- <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-base.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.min.js" integrity="sha512-mlz/Fs1VtBou2TrUkGzX4VoGvybkD9nkeXWJm3rle0DPHssYYx4j+8kIS15T78ttGfmOjH0lLaBXGcShaVkdkg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
     <!-- styles -->
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -166,7 +168,9 @@
             </div>
             <div class="info-graph-container">
                 <div class="info-graph-block">
-                    <div class="info-graph"></div>
+                    <div class="info-graph">
+                        <canvas id="myChart"></canvas>
+                    </div>
                     <div class="info-btn-container">
                         <button type="button" title="30d">30D</button>
                         <button type="button" title="60d">60D</button>

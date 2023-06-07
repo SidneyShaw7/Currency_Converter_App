@@ -20,7 +20,7 @@ input:focus {
 .main-info-converter-container {
     display: flex;
     text-align: center;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     flex-wrap: wrap;
     /* margin: 20px; */
@@ -28,10 +28,12 @@ input:focus {
     gap: 1em;
     margin: 20px;
     /* background-color: #ECE8DD; */
+    /* height: 100%; */
 }
 
 .main-info-converter-container>* {
     flex: 1;
+    /* height: 100%; */
 }
 
 .main-conversion-block {
@@ -40,13 +42,14 @@ input:focus {
     flex-direction: column;
     flex-wrap: wrap;
     border: 1px solid black;
-    height: auto;
+    /* height: 300px; */
     width: auto;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24), 0 6px 20px 0 rgba(0, 0, 0, 0.24);
     /* margin: 20px; */
     margin-right: 0;
     background-color: white;
+    /* overflow: auto; */
 }
 
 .main-conversion-block>* {
@@ -249,11 +252,21 @@ input {
 
 
 .info-graph-container {
-    max-width: 400px;
+    max-width: 300px;
     border: 1px solid;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.24), 0 6px 20px 0 rgba(0, 0, 0, 0.24);
     border-radius: 10px;
     background-color: white;
+    /* height: 100%; */
+    /* display: flex; */
+}
+
+#myChart {
+    /* width: 150px !important; */
+    height: 200px !important;
+    /* padding: 20px; */
+    overflow-x: auto;
+    
 }
 
 .center-swipe-btn {
