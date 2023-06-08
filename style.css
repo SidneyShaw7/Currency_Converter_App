@@ -259,13 +259,18 @@ input {
     background-color: white;
     /* height: 100%; */
     /* display: flex; */
+    overflow-x: auto;
+    flex: 1;
+    /* font-size: 5px !important; */
 }
 
 #myChart {
-    /* width: 150px !important; */
+    width: 300px !important;
     height: 200px !important;
     /* padding: 20px; */
     overflow-x: auto;
+    flex: 1;
+    /* font-size: 5px !important; */
     
 }
 

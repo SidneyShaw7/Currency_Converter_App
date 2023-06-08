@@ -74,31 +74,29 @@ async function makeReq() {
         type: 'line',
         data: {
             labels: newDays,
-            // rDays.forEach((day) => {
-            //     return [day];
-            // }),
                 datasets: [{
                     // label: '',
                     data: newValues,
-                    // rDays.forEach((day) => {
-                    //     return [].push.rHistorical[day.RUB];
-                    //  }),
                     borderWidth: 1,
                     fill: false,
                     pointStyle: false
                 }]
             },
             options: {
-                scales: {
-                    y: {
-                        // beginAtZero: false
+                plugins: {
+                    legend: {
+                        labels: {
+                            // This more specific font property overrides the global property
+                            font: {
+                                size: 10
+                            }
+                        }
                     }
                 }
             }
         });
     }
-    // congig
-    // chart 
+ 
     
 
 
