@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', makeReq);
 
 lsExtendBtn.addEventListener('click', extendLList);
 rsExtendBtn.addEventListener('click', extendRList);
-rateExtendBtn.addEventListener('click', extendBList)
+rateExtendBtn.addEventListener('click', extendBList);
 
 // *****        FUNCTIONS       *****
 
@@ -111,6 +111,9 @@ async function makeReq() {
     
     // chart
     
+    // function defaultSet() {
+    //     leftUpInput.innerHTML = 
+    // }
     
     // getting corrected dates 
     function date() {
